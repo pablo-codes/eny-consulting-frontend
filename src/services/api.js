@@ -4,7 +4,7 @@ import axios from 'axios';
 const api =
     process.env.NODE_ENV === "production"
         ? axios.create({
-            baseURL: "https://api079.perzsirentals.com/api/v1/",
+            baseURL: "https://main-jay-clear.ngrok-free.app/api/",
 
         })
         : axios.create({
