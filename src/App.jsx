@@ -6,7 +6,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/eny-consulting-frontend">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/health" element={<Health />} />
