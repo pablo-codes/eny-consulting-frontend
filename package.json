@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage": "https://pablo-codes.github.io/eny-consulting-frontend/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
