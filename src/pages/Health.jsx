@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { checkChatHealth } from "../services/chatService";
 import { checkLeadTrackingHealth } from "../services/leadTrackingService";
+import { Link } from "react-router-dom";
 
 const Health = () => {
   const [chatHealth, setChatHealth] = useState({
@@ -197,6 +198,15 @@ const Health = () => {
               Last updated: {lastChecked.toLocaleTimeString()}
             </p>
           )}
+        </div>
+
+        <div className="text-center">
+          <Link
+            to={"/export"}
+            className="flex items-center w-[15%] justify-center mx-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Export Leads Data
+          </Link>
         </div>
 
         {/* Service Information */}
