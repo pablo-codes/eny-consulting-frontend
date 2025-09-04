@@ -32,8 +32,7 @@ const LeadExportPage = () => {
       <h1 className="text-2xl font-bold mb-4">Export Leads to CSV</h1>
       <p className="mb-6 text-gray-600">
         Click the button below to generate and download the latest leads CSV
-        file. The system will only regenerate the CSV if the TXT file is newer
-        than the CSV and older than 10 minutes.
+        file.
       </p>
 
       <button
