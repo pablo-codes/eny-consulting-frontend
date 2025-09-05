@@ -1,29 +1,15 @@
-# Business Analysis School AI Student Support Portal
+# Business Analysis School AI Student Support Portal 🤖
 
-An intelligent, conversational AI assistant designed to provide instant support to current and prospective students of the Business Analysis School. This portal leverages a modern React frontend to deliver a seamless user experience, answer queries about certifications and programs, and capture leads effectively.
+This project is a modern, responsive frontend application for the Business Analysis School. It features an intelligent AI chatbot designed to provide instant support to students, answer questions about certifications and programs, and offer career guidance. Built with React and Tailwind CSS, the portal enhances user engagement and captures valuable leads through an integrated tracking system.
 
-## ✨ Key Features
+## ✨ Features
 
-- **🤖 Intelligent AI Chat**: A responsive chat interface that answers questions about certifications (SAMC™, SDC®), coaching programs, and career guidance.
-- **🔗 Lead Capture & Tracking**: Integrated Call-to-Action (CTA) buttons within AI responses to guide users and track engagement with backend services.
-- **🗂️ Offline Chat History**: Leverages IndexedDB to persist chat sessions locally, allowing users to resume conversations even after closing the browser.
-- **📉 Low-Confidence Fallback**: Automatically presents an option to connect with a human agent when the AI's response confidence is low.
-- **❤️ System Health Dashboard**: A dedicated page to monitor the real-time operational status of backend microservices (AI Chat & Lead Tracking).
-- **📄 Markdown Support**: AI responses are rendered with rich formatting, including lists, links, and bold text for improved readability.
-- **📱 Responsive Design**: A clean, mobile-first interface built with Tailwind CSS for a consistent experience across all devices.
-
-## 🛠️ Technologies Used
-
-| Technology         | Description                                             |
-| ------------------ | ------------------------------------------------------- |
-| **React**          | A JavaScript library for building user interfaces.      |
-| **Vite**           | Next-generation frontend tooling for fast builds.       |
-| **Tailwind CSS**   | A utility-first CSS framework for rapid UI development. |
-| **React Router**   | Client-side routing for single-page applications.       |
-| **Axios**          | A promise-based HTTP client for API communication.      |
-| **IDB**            | A lightweight wrapper for the IndexedDB API.            |
-| **React Markdown** | Renders Markdown as React components.                   |
-| **React Icons**    | A library for including popular icons in the project.   |
+-   **🧠 AI-Powered Chat Interface**: A conversational AI that provides detailed information about certifications (SAMC™, SDC®), coaching programs, and career paths.
+-   **💾 Local Chat Persistence**: Chat history is automatically saved to the browser's IndexedDB, allowing users to continue their conversations across sessions.
+-   **📈 Lead Generation & Tracking**: Seamlessly captures user interest by tracking clicks on Call-to-Action (CTA) buttons, providing valuable data for converting prospects.
+-   **📊 System Health Dashboard**: A dedicated page (`/health`) to monitor the real-time status of the backend chat and lead tracking services.
+-   **📄 CSV Data Export**: An admin-focused feature to export all captured lead data into a CSV file for analysis.
+-   **📱 Fully Responsive Design**: The user interface is crafted with Tailwind CSS for a seamless experience on desktops, tablets, and mobile devices.
 
 ## 🚀 Getting Started
 
@@ -31,8 +17,8 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Prerequisites
 
-- Node.js (v18 or later recommended)
-- npm or yarn package manager
+-   [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+-   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
 
@@ -40,53 +26,59 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```bash
     git clone https://github.com/pablo-codes/eny-consulting-frontend.git
     ```
+
 2.  **Navigate to the Project Directory**
     ```bash
-    cd eny-consulting-frontend/client
+    cd eny-consulting-frontend
     ```
+
 3.  **Install Dependencies**
     ```bash
     npm install
     ```
-4.  **Run the Development Server**
+
+4.  **Backend Configuration**
+    This frontend application is designed to connect to a backend API. The API service in (`src/services/api.js`) is pre-configured to use `http://localhost:5000/api/` for local development. Ensure your local backend server is running on port `5000`. No `.env` file is required for this default setup.
+
+5.  **Run the Development Server**
     ```bash
     npm run dev
     ```
     The application will be available at `http://localhost:3000`.
 
-## 🖥️ Usage
+##  kullanım
 
-Once the application is running, you can interact with its main features:
+Once the application is running, you can explore its features:
 
-### AI Chat Interface
+-   **Chat with the AI Assistant**: Open your browser to `http://localhost:3000`. The main page features the chat interface. You can ask questions such as:
+    -   "What is the SAMC certification?"
+    -   "Tell me about your coaching programs."
+    -   "How can I land a six-figure job in business analysis?"
+-   **Check System Health**: Navigate to `/health` (e.g., `http://localhost:3000/#/health`) to view the operational status of the backend services. You can refresh the status manually.
+-   **Export Lead Data**: Navigate to `/export` (e.g., `http://localhost:3000/#/export`) to download a CSV file containing all tracked lead interactions.
 
-The main page (`/`) features the AI assistant.
+## 🛠️ Technologies Used
 
-- Type your questions about Business Analysis School's offerings into the input field at the bottom.
-- Press `Enter` or click the send button to submit your message.
-- The AI will respond with information and may include interactive buttons (CTAs) for actions like signing up for a masterclass or viewing a certification page.
+| Technology                                                                          | Description                                                   |
+| :---------------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| **[React](https://react.dev/)**                                                     | A JavaScript library for building user interfaces.            |
+| **[Vite](https://vitejs.dev/)**                                                       | A modern frontend build tool for an optimized development experience. |
+| **[Tailwind CSS](https://tailwindcss.com/)**                                        | A utility-first CSS framework for rapid UI development.       |
+| **[React Router](https://reactrouter.com/)**                                        | A library for declarative routing in React applications.      |
+| **[Axios](https://axios-http.com/)**                                                  | A promise-based HTTP client for making API requests.          |
+| **[IndexedDB (`idb`)](https://github.com/jakearchibald/idb)**                        | Client-side database for storing chat history locally.        |
 
-### System Health Dashboard
+## 👤 Author
 
-Navigate to the `/health` page to view the status of backend services.
+**pablo-codes**
 
-- This dashboard provides a real-time check on the "AI Chat Service" and "Lead Tracking Service".
-- Statuses are color-coded: green for healthy, red for unhealthy.
-- Click the "Refresh Health Check" button to manually trigger a new status check.
+-   **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-username)
+-   **Twitter**: [@YourTwitterHandle](https://twitter.com/your-twitter-handle)
 
-## 📂 Project Structure
+<p align="left">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS Badge"/>
+</p>
 
-The codebase is organized to maintain a clean and scalable architecture.
-
-```
-/src
-|-- /assets         # Static assets like images and logos
-|-- /components     # Reusable UI components
-|   |-- /chat       # Components specific to the chat interface
-|   |-- /ui         # Generic UI elements (Button, Modal, etc.)
-|-- /pages          # Top-level page components (Home, Health)
-|-- /services       # Modules for API communication and data handling
-|-- App.jsx         # Main application component with routing
-|-- main.jsx        # Entry point of the React application
-|-- index.css       # Global styles and Tailwind CSS configuration
-```
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)

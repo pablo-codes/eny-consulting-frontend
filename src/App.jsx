@@ -7,7 +7,7 @@ import LeadExportPage from "./pages/LeadExportPage";
 
 function App() {
   return (
-    <Router basename="/eny-consulting-frontend">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/health" element={<Health />} />
