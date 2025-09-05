@@ -3,22 +3,29 @@ import { exportLeadsToCSV } from "../services/leadTrackingService";
 
 const LeadExportPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [downloadUrl, setDownloadUrl] = useState("");
   const [error, setError] = useState(null);
 
   const handleExportClick = async () => {
     setIsLoading(true);
     setError(null);
-    setDownloadUrl("");
 
     try {
       const response = await exportLeadsToCSV();
+      // Make sure your service sets { responseType: "blob" } in axios
 
-      if (response.data?.url) {
-        setDownloadUrl(response.data.url);
-      } else {
-        setError("CSV could not be generated.");
-      }
+      // Create object URL from blob
+      const url = window.URL.createObjectURL(response.data);
+
+      // Trigger download
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `lead_data_${new Date().toISOString().split("T")[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+
+      // Clean up
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
     } catch (err) {
       console.error("Error exporting CSV:", err);
       setError("Failed to export CSV. Please try again.");
@@ -46,19 +53,6 @@ const LeadExportPage = () => {
       >
         {isLoading ? "Generating CSV..." : "Export CSV"}
       </button>
-
-      {downloadUrl && (
-        <div className="mt-4">
-          <a
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline font-medium"
-          >
-            Download CSV
-          </a>
-        </div>
-      )}
 
       {error && <div className="mt-4 text-red-600 font-medium">{error}</div>}
     </div>

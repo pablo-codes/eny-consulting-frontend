@@ -4,7 +4,7 @@ import axios from 'axios';
 const api =
     process.env.NODE_ENV === "production"
         ? axios.create({
-            baseURL: "https://414ce54ec90ddd.lhr.life/api/",
+            baseURL: "https://eny-consulting-backend.vercel.app/api/",
 
         })
         : axios.create({
