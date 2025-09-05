@@ -49,7 +49,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
     The application will be available at `http://localhost:3000`.
 
-## kullanım
+## Usage
 
 Once the application is running, you can explore its features:
 

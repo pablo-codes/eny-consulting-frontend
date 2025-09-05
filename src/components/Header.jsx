@@ -36,6 +36,14 @@ const Header = () => {
               </li>
               <li>
                 <Link
+                  to="/export"
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  Export Leads
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/health"
                   className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
                 >
